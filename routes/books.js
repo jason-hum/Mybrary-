@@ -145,10 +145,12 @@ async function renderFormPage(res, book, form, hasError=false ) {
             book: book 
         }
         if (hasError) {
-            if (form === 'edit') params.errorMessage = 'Error editing book'
-        } else {
-            params.errorMessage = 'Error creating book'
-        } 
+            if (form === 'edit') {
+                params.errorMessage = 'Error editing book'
+            } else {
+                params.errorMessage = 'Error creating book'
+            } 
+        }
 
         // console.log(params)
 
